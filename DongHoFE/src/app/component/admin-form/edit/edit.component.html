@@ -1,0 +1,163 @@
+<div class="container">
+  <div class="col_container">
+    <div class="m_col">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Avatar_Abbas_-_cartoon_transparent_200px.png" alt="">
+        <h3>quach's shop</h3>
+      </div>
+      <div class="user">
+        <img src="https://i.dlpng.com/static/png/6728153_preview.png" alt="">
+        <p>Welcome, <span>Hong Thu</span>!</p>
+      </div>
+      <div class="nav_bar">
+        <ul>
+          <li class="home">
+            <h3>
+              <p><i class="fas fa-home"></i>Home</p><i class="fas fa-chevron-down down"></i>
+            </h3>
+            <div class="home_drop">
+              <ul>
+                <li><a href="">Dashboard 1</a></li>
+                <li><a href="">Dashboard 1</a></li>
+                <li><a href="">Dashboard 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="form">
+            <h3>
+              <p><i class="fa fa-edit"></i>Form</p><i class="fas fa-chevron-down down"></i>
+            </h3>
+            <div class="form_drop">
+              <ul>
+                <li><a href="">Add product</a></li>
+                <li><a href="">Edit product</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3>
+              <p><i class="fas fa-table"></i>Table</p><i class="fas fa-chevron-down down"></i>
+            </h3>
+            <div class="table_drop">
+              <ul>
+                <li><a href="">Products</a></li>
+                <li><a href="">Users</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3>
+              <p><i class="fas fa-chart-bar"></i>Data Presentation</p><i
+              class="fas fa-chevron-down down"></i>
+            </h3>
+            <div class="dpre_drop">
+              <ul>
+                <li><a href="">hong thu ne</a></li>
+                <li><a href="">hong thu ne</a></li>
+                <li><a href="">hong thu ne</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3>
+              <p><i class="fas fa-copy"></i>Layouts</p><i class="fas fa-chevron-down down"></i>
+            </h3>
+            <div class="layouts_drop">
+              <ul>
+                <li><a href="">hong thu ne</a></li>
+                <li><a href="">hong thu ne</a></li>
+                <li><a href="">hong thu ne</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3>
+              <p><i class="fas fa-desktop"></i>UI Elements</p><i class="fas fa-chevron-down down"></i>
+            </h3>
+            <div class="ui_drop">
+              <ul>
+                <li><a href="">hong thu ne</a></li>
+                <li><a href="">hong thu ne</a></li>
+                <li><a href="">hong thu ne</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="form_o">
+    <div class="add_product">
+      <form action="" #prodForm="ngForm">
+        <h1>Thêm sản phẩm</h1>
+        <h4>Tên:</h4>
+        <input [(ngModel)]="product.model"
+               [ngModelOptions]="{standalone: true}"
+               name="model"
+               required #model="ngModel"
+               type="text"
+               placeholder="name of product...">
+        <div style="position: relative"><div [hidden]="!(model.invalid && (model.dirty || model.touched))" class="validate_uname" style="color: #830d0d; position: absolute; top:0px; left:5px">Điền tên sản phẩm đi nè!</div></div>
+        <div style="display:flex; justify-content: space-between">
+          <div>
+            <h4>Loại:</h4>
+            <select [(ngModel)]="product.gender" [ngModelOptions]="{standalone: true}"
+                    style="width: 200px;"
+                    name="gender"
+                    required #gender="ngModel"
+                    id="brands">
+              <option value="1">Nam</option>
+              <option value="2">Nữ</option>
+              <option value="3">Cả hai</option>
+            </select>
+          </div>
+          <div>
+            <h4>Thương hiệu:</h4>
+            <input [(ngModel)]="product.brand" [ngModelOptions]="{standalone: true}"
+                   style="width: 200px;"
+                   name="brand"
+                   required #brand="ngModel"
+                   type="text"
+                   placeholder="branch of product...">
+            <div style="position: relative"><div [hidden]="!(brand.invalid && (brand.dirty || brand.touched))" class="validate_uname" style="color: #830d0d; position: absolute; top:0px; left:5px">Điền thương hiệu đi nè!</div></div>
+          </div>
+        </div>
+        <div style="display:flex; justify-content: space-between">
+          <div>
+            <h4>Giá:</h4>
+            <input [(ngModel)]="product.price" [ngModelOptions]="{standalone: true}"
+                   name="price"
+                   required #price="ngModel"
+                   style="width: 200px;"
+                   type="number"
+                   min="1"
+                   placeholder="price of product...">
+            <div style="position: relative"><div [hidden]="!(price.invalid && (price.dirty || price.touched))" class="validate_uname" style="color: #830d0d; position: absolute; top:0px; left:5px">Điền giá đi nè!</div></div>
+          </div>
+          <div>
+            <h4>Số lượng:</h4>
+            <input [(ngModel)]="product.quantity" [ngModelOptions]="{standalone: true}"
+                   name="quantity"
+                   required #quantity="ngModel"
+                   style="width: 200px;"
+                   min="1"
+                   type="number" placeholder="quantity of product...">
+            <div style="position: relative"><div [hidden]="!(quantity.invalid && (quantity.dirty || quantity.touched))" class="validate_uname" style="color: #830d0d; position: absolute; top:0px; left:5px">Điền số lượng đi nè!</div></div>
+          </div>
+        </div>
+        <h4>Mô tả:</h4>
+        <input [(ngModel)]="product.description" [ngModelOptions]="{standalone: true}"
+               type="text"
+               name="description"
+               required #description="ngModel"
+               placeholder="description of product...">
+        <div style="position: relative"><div [hidden]="!(description.invalid && (description.dirty || description.touched))" class="validate_uname" style="color: #830d0d; position: absolute; top:0px; left:5px">Điền mô tả đi nè!</div></div>
+        <h4>Hình ảnh:</h4>
+        <input [(ngModel)]="product.image" [ngModelOptions]="{standalone: true}" type="file">
+        <div class="add_button">
+          <button [disabled]="!prodForm.form.valid" (click)="save()">Add product</button>
+        </div>
+      </form>
+    </div>
+</div>
+</div>

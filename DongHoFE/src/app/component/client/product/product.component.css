@@ -1,0 +1,384 @@
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+a, p, i, h1, h3 {
+  letter-spacing: 1px;
+  color: #8e6faa;
+}
+
+.input_search {
+  -webkit-animation: tranformLeftToRight 1s 1s forwards;
+  animation: tranformLeftToRight 1s 1s forwards;
+  width: 300px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  outline: none;
+  border: 1px solid #8e6faa;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.f-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.f-space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.active {
+  color: #d7bcdb;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.445);
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.white {
+  background-color: white;
+}
+
+.product {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.product h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product .sort {
+  background: #fff;
+  top: 20px;
+  z-index: 9;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 4px 20px -2px #968f8f;
+  box-shadow: 0 4px 20px -2px #968f8f;
+  padding: 30px;
+  width: 100%;
+}
+
+.product .sort h2 {
+  margin: 10px 0;
+}
+
+header {
+  z-index: 12;
+
+  width: 100%;
+  background: #7dc0b9;
+  border-bottom: 1px solid #d7bcdb;
+  position: fixed;
+  top: 0;
+}
+
+header .container {
+  height: 50px;
+  width: 1200px;
+}
+
+header .container .logo {
+  width: 150px;
+}
+
+header .container .logo a, header .container .logo i {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+header .container .logo:hover a, header .container .logo:hover i {
+  color: #d7bcdb;
+}
+
+header .container .nav {
+  width: 600px;
+}
+
+header .container .nav .line {
+  display: none;
+}
+
+header .container .nav .line i {
+  font-size: 30px;
+}
+
+header .container .nav ul li a:hover {
+  color: #d7bcdb;
+}
+
+header .container a i {
+  font-size: 20px;
+}
+
+header .container .user {
+  width: 150px;
+  padding: 10px;
+  position: relative;
+}
+header .container .user .users{
+  padding: 10px;
+  /*width: 90px;*/
+}
+
+header .container .user .users:hover i {
+  color: #d7bcdb;
+}
+
+header .container .user .users:hover .infor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-40%, 60%);
+  transform: translate(-40%, 60%);
+  background: #d7bcdb;
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+  display: block;
+}
+
+header .container .user .users:hover .infor li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+}
+
+header .container .user .users:hover .infor li a {
+  margin: 0 5px;
+}
+
+header .container .user .users:hover .infor li i {
+  color: #8e6faa;
+}
+
+header .container .user .users:hover .infor li:hover a, header .container .user .users:hover .infor li:hover i {
+  color: #7dc0b9;
+}
+
+header .container .user .cart {
+  margin-left: 30px;
+  position: relative;
+}
+
+header .container .user .cart p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(10px, 10px);
+  transform: translate(10px, 10px);
+}
+
+header .container .user .cart:hover p, header .container .user .cart:hover i {
+  color: #d7bcdb;
+}
+
+.product .sort table th {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+}
+
+.product .sort .price {
+  width: 200px;
+}
+
+.product .items {
+  z-index: -1;
+  padding-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1200px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.product .items .item {
+  position: relative;
+  margin: 20px;
+  -webkit-box-shadow: 10px 0.111rem 40px 1px rgba(77, 76, 76, 0.651);
+  box-shadow: 10px 0.111rem 40px 1px rgba(77, 76, 76, 0.651);
+  border: 1px solid #d7bcdb;
+  width: 250px;
+  height: 450px;
+  text-align: center;
+}
+
+.product .items .item .sale {
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #8e6faa;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.product .items .item img {
+  margin: 25px 0;
+  width: 200px;
+  height: 200px;
+}
+
+.product .items .item img:hover {
+  -webkit-animation: zoomIn 1s forwards;
+  animation: zoomIn 1s forwards;
+}
+
+.product .items .item .content {
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+}
+.product .items .item .content h3 {
+  height: 50px;
+}
+.product .items .item .content h4 {
+  line-height: 28px;
+  color: #8e6faa;
+  letter-spacing: 1px;
+}
+
+.product .items .item .content a {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #aec4f3;
+  padding: 10px 20px;
+  border: none;
+}
+
+.product .items .item .content a:hover {
+  background: #7dc0b9;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+.more {
+  background: #d7bcdb;
+  width: 100%;
+}
+
+.more a, .more i, .more p {
+  color: #333333;
+}
+
+.more .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.more .top li {
+  padding: 10px;
+}
+
+.more .top li:hover a {
+  color: #7dc0b9;
+}
+
+.more .bot {
+  text-align: center;
+  padding: 10px;
+}
+
+.more .bot p {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+}
+
+.more .bot p a:hover {
+  color: #7dc0b9;
+}
+
+.more .bot .sn {
+  height: 40px;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.more .bot .sn i:hover {
+  color: #7dc0b9;
+}
+/*# sourceMappingURL=product.css.map */

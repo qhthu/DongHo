@@ -1,0 +1,190 @@
+<header class="f-center">
+  <div class="container f-space">
+    <div class="logo">
+      <i class="fas fa-tshirt"></i>
+      <a href="">shop</a>
+    </div>
+    <div class="nav">
+      <div class="line">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="f-space">
+        <li><a href="" [routerLink]="['/home']" class="Home">Trang chủ</a></li>
+        <li><a href="" [routerLink]="['/home']" class="Collections">Bộ sưu tập</a></li>
+        <li><a href="" [routerLink]="['/product']" class="Product">Sản phẩm</a></li>
+        <li><a href="" [routerLink]="['/home']">Tin tức</a></li>
+        <li><a href="" [routerLink]="['/home']" class="Contact">Liên hệ</a></li>
+      </ul>
+    </div>
+
+    <div class="user f-space">
+      <div class="users">
+        <a href="" *ngIf="user == ''" style="display:flex; width: 100px;">
+          <span>Tài khoản </span>
+          <i style="margin-left: 5px;" class="fas fa-user-circle"></i>
+        </a>
+        <a href="" *ngIf="user != ''" style="display:flex; width: 100px;">
+          <span>Hi,{{user}}!</span>
+          <i style="margin-left: 5px;" class="fas fa-user-circle"></i>
+        </a>
+
+        <div class="infor none">
+          <ul *ngIf="user == ''">
+            <li><i class="fas fa-sign-in-alt"></i><a href="" [routerLink]="['/login']">Đăng nhập</a></li>
+            <li><i class="fas fa-user-plus"></i><a href="" [routerLink]="['/register']">Đăng ký</a></li>
+          </ul>
+          <ul *ngIf="user != ''">
+            <li><i class="fas fa-sign-in-alt"></i><a href="">Tài khoản</a></li>
+            <li><i class="fas fa-user-plus"></i><a href="" (click)="signOut()">Đăng xuất</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cart f-center">
+        <a href="" [routerLink]="['/cart']">
+          <i class="fas fa-cart-plus"></i>
+          <p>0</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div class="container">
+  <div style="padding-top: 50px; width: 1200px; margin: 0 auto;" class="top">
+    <div class="address">
+      <h2>Địa chỉ nhận hàng</h2>
+      <p></p>
+    </div>
+  </div>
+  <div class="center">
+    <table>
+      <tr>
+        <th>
+          <p>Sản phẩm</p>
+        </th>
+        <th>
+          <p>Đơn giá</p>
+        </th>
+        <th>
+          <p>Số lượng</p>
+        </th>
+        <th>
+          <p>Thành tiền</p>
+        </th>
+      </tr>
+      <tr>
+        <td style="display: flex;"><img width="70px" style="margin-right: 10px;" src="/img/aokhoac1.jpg"
+                                        alt="">
+          <p>Đồng hồ nè abc thư hồng quách</p>
+        </td>
+        <td>
+          <p>đ100.000.000</p>
+        </td>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+          <p>đ200.000.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="display: flex;"><img width="70px" style="margin-right: 10px;" src="/img/aokhoac1.jpg"
+                                        alt="">
+          <p>Đồng hồ nè abc thư hồng quách</p>
+        </td>
+        <td>
+          <p>đ100.000.000</p>
+        </td>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+          <p>đ200.000.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="display: flex;"><img width="70px" style="margin-right: 10px;" src="/img/aokhoac1.jpg"
+                                        alt="">
+          <p>Đồng hồ nè abc thư hồng quách</p>
+        </td>
+        <td>
+          <p>đ100.000.000</p>
+        </td>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+          <p>đ200.000.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="display: flex;"><img width="70px" style="margin-right: 10px;" src="/img/aokhoac1.jpg"
+                                        alt="">
+          <p>Đồng hồ nè abc thư hồng quách</p>
+        </td>
+        <td>
+          <p>đ100.000.000</p>
+        </td>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+          <p>đ200.000.000</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="bottom">
+    <div class="total">
+      <h3>Tổng số tiền hàng: <span>đ200.000.000</span></h3>
+      <h3>Phí vận chuyển: <span>đ20.000</span></h3>
+      <h3>Tổng cộng: <span>đ200.020.000</span></h3>
+      <button>Đặt hàng</button>
+    </div>
+  </div>
+</div>
+<div class="more">
+  <div class="top">
+    <div class="left">
+      <p>Chăm sóc khách hàng</p>
+      <ul>
+
+        <li><a href="">Trung tâm trợ giúp</a></li>
+        <li><a href="">Cửa hàng tin cậy</a></li>
+        <li><a href="">Cửa hàng khách hàng</a></li>
+        <li><a href="">Thanh toán</a></li>
+        <li><a href="">Vận chuyển</a></li>
+      </ul>
+    </div>
+    <div class="center">
+      <p>Về cửa hàng</p>
+      <ul>
+        <li><a href="">Về cửa hàng Việt Nam</a></li>
+        <li><a href="">Tuyển dụng</a></li>
+        <li><a href="">Quy định cửa hàng</a></li>
+        <li><a href="">Giảm giá nhanh</a></li>
+        <li><a href="">Kênh bán hàng</a></li>
+        <li><a href="">Chính hãng</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <p>Thanh toán</p>
+      <ul>
+        <li><a href="">Visa</a></li>
+        <li><a href="">Mastercard</a></li>
+        <li><a href="">Airpay</a></li>
+        <li><a href="">Installment</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bot">
+    <div class="sn f-space">
+      <a href="fb.com/qquach96"><i class="fab fa-facebook-square"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-twitter-square"></i></a>
+      <a href=""><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>Copyright © 2020, All Rights Reserved, Designed by <a href="">A Thư nè!</a></p>
+  </div>
+</div>

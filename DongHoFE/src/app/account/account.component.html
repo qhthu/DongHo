@@ -1,0 +1,15 @@
+<div *ngIf="user != null && user.status == 1">
+  <p>Thông tin</p>
+  <p>Tên: {{user.firstName}} {{user.lastName}}</p>
+  <p>Ngày sinh: {{user.dob}}</p>
+  <p>Tên tài khoản: {{user.username}}</p>
+  <button (click)="deleteAccount(user.id)">Xóa tài khoản</button>
+</div>
+<div *ngIf="user.status != 1">
+  <p>Tài khoản không tồn tại!!</p>
+</div>
+<div *ngIf="user == null">
+  <p>Tài khoản không tồn tại!!</p>
+</div>
+
+
